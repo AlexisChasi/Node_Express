@@ -9,11 +9,11 @@ app.get('/', (req, res) => {
 
 app.get('/integrantes', (req, res) => {
     res.json([
-           {
+        {
             "nombre": "Alexis",
             "apellido": "Chasi",
             "edad": 28
-        },
+        }, 
         {
             "nombre": "Roberto",
             "apellido": "Shiao",
@@ -24,25 +24,25 @@ app.get('/integrantes', (req, res) => {
             "apellido": "Guanoluisa",
             "edad": 23
         },
-      
+       
         {
             "nombre": "Franklin",
             "apellido": "Patiño",
             "edad": 21
-        },
+        }
 
     ])
 })
 
 app.get('/products', (req, res) => {
-    res.send(
+    res.send(`
             <h1>Catálogo de productos</h1>
                 <p>Bienvenidos</p>
-    )
+    `)
 })
 
 
 
 app.listen(PORT, () => {
-    console.log(Servidor ok en el puerto ${PORT});
+    console.log(`Servidor ok en el puerto ${PORT}`);
 });

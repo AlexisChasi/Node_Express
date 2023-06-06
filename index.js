@@ -1,22 +1,48 @@
-const express = require('express')
-const app = express()
+const express = require("express");
+const app = express();
+const PORT = process.env.PORT || 3000;
 
-// Ruta de inicio
+
 app.get('/', (req, res) => {
-    res.send('<h1>Bienvenido al servidor Express</h1>');
-});
+    res.send("Landing page - Grupo # 3")
+})
 
-// Ruta de información del usuario
-app.get('/usuario', (req, res) => {
-    const usuario = {
-        nombre: "Alexis Chasi",
-        correo: "alexis.chasi@epn.edu.ec",
-        edad: 28,
-        pais: "Ecuador",
-        isAdmin: true
-    };
-    res.json(usuario);
-});
+app.get('/integrantes', (req, res) => {
+    res.json([
+           {
+            "nombre": "Alexis",
+            "apellido": "Chasi",
+            "edad": 28
+        },
+        {
+            "nombre": "Roberto",
+            "apellido": "Shiao",
+            "edad": 21
+        },
+        {
+            "nombre": "Elvis",
+            "apellido": "Guanoluisa",
+            "edad": 23
+        },
+      
+        {
+            "nombre": "Franklin",
+            "apellido": "Patiño",
+            "edad": 21
+        },
 
-app.listen(3000)
-console.log("Servidor corriendo, OK!!");
+    ])
+})
+
+app.get('/products', (req, res) => {
+    res.send(
+            <h1>Catálogo de productos</h1>
+                <p>Bienvenidos</p>
+    )
+})
+
+
+
+app.listen(PORT, () => {
+    console.log(Servidor ok en el puerto ${PORT});
+});

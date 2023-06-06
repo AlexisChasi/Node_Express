@@ -9,9 +9,9 @@ app.get('/', (req, res) => {
 // Ruta de información del usuario
 app.get('/usuario', (req, res) => {
     const usuario = {
-        nombre: "Nombre Apellido",
-        correo: "Nombre.Apellido@epn.edu.ec",
-        edad: 21,
+        nombre: "Alexis Chasi",
+        correo: "alexis.chasi@epn.edu.ec",
+        edad: 28,
         pais: "Ecuador",
         isAdmin: true
     };

@@ -3,7 +3,7 @@
     "express": "^4.18.2",
     "nodemon": "^2.0.22"
   },
-  "name": "despliegue_clase8",
+  "name": "Node_Express",
   "version": "1.0.0",
   "main": "index.js",
   "devDependencies": {},
